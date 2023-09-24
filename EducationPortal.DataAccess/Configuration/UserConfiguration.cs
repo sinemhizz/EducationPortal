@@ -16,9 +16,6 @@ namespace EducationPortal.DataAccess.Configuration
             builder.HasKey(x => x.Id);
             builder.Property(x=>x.Email).IsRequired();
             builder.Property(x=>x.UserName).IsRequired();
-
-            builder.HasData(
-                new User { Id = "E06455D", FirstName = "Sinem", LastName = "Hız", Email = "sinemhiz66@gmail.com", UserName = "sinem.hiz" });
         }
     }
 }
