@@ -18,6 +18,7 @@ namespace EducationPortal.Business.Mapper
             CreateMap<CreateEducationDto, Education>().ReverseMap();
             CreateMap<ListEducationDto, Education>().ReverseMap();
             CreateMap<UpdateEducationDto, Education>().ReverseMap();
+            CreateMap<CreateUserEducationDto, UserEducation>().ReverseMap();
         }
     }
 }

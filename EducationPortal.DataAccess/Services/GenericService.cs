@@ -14,10 +14,10 @@ namespace EducationPortal.DataAccess.Services
     public class GenericService<TEntity> : IGenericService<TEntity>
        where TEntity : class
     {
-        private readonly AppDbContext _context;
+        private readonly DbContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public GenericService(AppDbContext context)
+        public GenericService(DbContext context)
         {
             _context = context;
             _dbSet = _context.Set<TEntity>();

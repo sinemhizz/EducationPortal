@@ -18,11 +18,8 @@ namespace EducationPortal.DataAccess.Services
         IQueryable<TEntity> GetAll();
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> expression);
         Task<bool> AnyAsync(Expression<Func<TEntity, bool>> expression);
-
         Task AddAsync(TEntity entity);
-
         void Remove(TEntity entity);
-
         TEntity Update(TEntity entity, bool ignoreQueryFilters = false);
 
     }
