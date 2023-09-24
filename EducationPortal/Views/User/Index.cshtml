@@ -1,0 +1,38 @@
+﻿@using EducationPortal.Entities.Entities;
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<User>
+<a class="btn btn-primary" asp-controller="User" asp-action="Save">Save Product</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Ad</td>
+            <td>Soyad</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Email</td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="User" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                    <a class="btn btn-danger" asp-controller="User" asp-action="Remove" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+
+
+</table>
+
+
