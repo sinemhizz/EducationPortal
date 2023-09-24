@@ -21,6 +21,8 @@ builder.Services.AddScoped<IUserDal, UserDal>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEducationDal, EducationDal>();
 builder.Services.AddScoped<IEducationService, EducationService>();
+builder.Services.AddScoped<IUserEducationDal, UserEducationDal>();
+builder.Services.AddScoped<IUserEducationService, UserEducationService>();
 builder.Services.AddScoped<IUserRefreshTokenDal, UserRefreshTokenDal>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
